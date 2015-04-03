@@ -10,6 +10,10 @@ line {
   stroke: #999;
 }
 
+svg {
+  border-width: 3px;
+}
+
 </style>
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -30,6 +34,12 @@ var force = d3.layout.force()
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
+
+svg.append("svg:rect")
+    .attr("width", 300)
+    .attr("height", 300)
+    .attr("fill", "white")
+    .attr("stroke", "black");
 
 d3.json("graph.json", function(error, graph) {
   if (error) return console.error(error);
@@ -53,8 +63,8 @@ d3.json("graph.json", function(error, graph) {
       .start();
 
   function tick() {
-    node.attr("cx", function(d) { return d.x = Math.max(radius, Math.min(width - radius, d.x)); })
-        .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(height - radius, d.y)); });
+    node.attr("cx", function(d) { return d.x = Math.max(radius, Math.min(300 - radius, d.x)); })
+        .attr("cy", function(d) { return d.y = Math.max(radius, Math.min(300 - radius, d.y)); });
 
     link.attr("x1", function(d) { return d.source.x; })
         .attr("y1", function(d) { return d.source.y; })
