@@ -1,4 +1,5 @@
 A Distributed Approach to Trust and Expertise
+=
 
 Non-profits and social justice lobbying
 Want to make a difference for prison reform, animal rights, etc
