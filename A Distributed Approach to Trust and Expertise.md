@@ -1,9 +1,8 @@
 A Distributed Approach to Trust and Expertise
 =
 
-Non-profits and social justice lobbying
-Want to make a difference for prison reform, animal rights, etc
-Who to support? Who to trust? Who watches the watchmen?
+This article addresses how various social causes compete for our attention and the impossibility of making a fully educated choice when deciding time and resource allocation. Some computer science history is introduced and shown to demonstrate some of the same issues surrounding choice and impossibility of complete and impartial analysis. The technical solution of using crowd-based trust schemes is introduced and connections are drawn between the two domains. Implementation is discussed and potential problems and possible solutions are addressed.
+
 No good solution
 --
 
