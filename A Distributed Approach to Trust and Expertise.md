@@ -20,7 +20,7 @@ Curator's limited bandwidth obstacle to new sites and domains of knowledge. Who 
 Solution: PageRank
 
 An allegory from the World Wide Web
-
+-
 Yahoo! is now know as a search engine and has indeed had search support for most of its life. Interestingly, Yahoo!'s primary product was not search; it was portals for different subject areas. Portals were maintained ("curated") at the hands of subject matter experts at best to anyone trying to make copy at worst. This meant that one's jumping off point into the World Wide Web wasn't free-form and Google Search capable; it was carefully delinated by a major corporation who needed to ensure its portal links were meaningful for research, family friendly unless specifically categorized as adults only, and reliable enough to maintain its good standing in the days of fast-changing webpages.
 
 Search worked fine. "Spiders" (automated computer programs) crawled the web, starting at one web page and noting all the key words, then moving to all that pages links and repeating the process. This worked, but meant that results had no real notion of importance -- every link is as valid as every other link.
@@ -30,5 +30,6 @@ The solution to the portal problem was to initially hire more curators. This pro
 A couple graduate students from Stanford University developed a novel approach to the search problem. Instead of crawling the web for all key words, the spider would maintain a database of how often it encountered outbound links to a particular site. For instance, a blog referral may link to amazon.com, a Wired article may link to amazon.com, and a manufacturer may link to amazon.com as a way to buy their products. These three links count as three outbound hyperlinks, and improve the ranking of amazon.com. The key innovation of PageRank is its ability to *inherit* weights; for example, now that Amazon has three extra inbound links, it now lends higher credibility to every site that *it* links to. This is both a slightly obvious, everyday idea, and an extraordinary feat of engineering.
 
 Adopting PageRank as a mechanism for discovery, support, and trust
+-
 Same problems of gaming the system. Co-opting existing migitation approaches.
 Social justice lobbying as the categorical dual of querying; pushing change rather than pulling data
