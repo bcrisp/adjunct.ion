@@ -33,3 +33,5 @@ Adopting PageRank as a mechanism for discovery, support, and trust
 -
 Same problems of gaming the system. Co-opting existing migitation approaches.
 Social justice lobbying as the categorical dual of querying; pushing change rather than pulling data
+
+Opposite (dual) Problems: Pushing Resources instead of Pulling Results
