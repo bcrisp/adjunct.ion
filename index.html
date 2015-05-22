@@ -60,7 +60,7 @@ var fill = d3.scale.category20();
 
 var force = d3.layout.force()
     .gravity(.05)
-    .charge(-240)
+    .charge(-700)
     .linkDistance(50)
     .size([width, height]);
 
@@ -226,6 +226,7 @@ d3.json("graph.json", function(error, graph) {
         //target = mousedown_node;
         //direction = 'left';
       //}
+      /*
 
       var link;
       link = links.filter(function(l) {
@@ -248,10 +249,16 @@ d3.json("graph.json", function(error, graph) {
 
         path = path.data(links);
 
+        /*
+
   // update existing links
   path.classed('selected', function(d) { return d === selected_link; })
     .style('marker-start', function(d) { return d.left ? 'url(#start-arrow)' : ''; })
     .style('marker-end', function(d) { return d.right ? 'url(#end-arrow)' : ''; });
+
+    */
+
+
 
 /*
   path.enter().append('svg:path')
@@ -277,8 +284,12 @@ d3.json("graph.json", function(error, graph) {
     var functor = {};
     functor.source = mousedown_node;
     functor.target = target;
-    functors.push(functor);
-      
+
+    links.push(functor);
+
+     link = svg.selectAll("line")
+      .data(links)
+    .enter().append("line"); 
 
 
 
@@ -287,15 +298,14 @@ d3.json("graph.json", function(error, graph) {
       //.links(links)
       //.on("tick", tick)
       //.start();
+
+       force.start();
     });
 
-  var link = svg.selectAll("line")
-      .data(links)
-    .enter().append("line"); 
+/*
 
 
-
-
+*/
   var groups = _.groupBy(graph.nodes, function(node){ return node.group; });
 
 /*
@@ -349,11 +359,21 @@ function resetMouseVars() {
   mouseup_node = null;
   mousedown_link = null;
 }
+
+//var link, path, circle;
+
+//function generateSelectors(){}
+
+  var link = svg.selectAll("line")
+      .data(links)
+    .enter().append("line"); 
 // handles to link and node element groups
 var path = svg.append('svg:g').selectAll('path');
    // circle = svg.append('svg:g').selectAll('g');
 
    var circle =svg.selectAll("circle");
+
+// }
 
     function keydown() {
       circle
@@ -437,9 +457,9 @@ function keyup() {
         .attr("y2", function(d) { return nodes[d.attr("source")].y; });
 
 */
-        var s1 = svg.select(".functor");//.attr("source");
-        if (s1.length > 1)
-          s1.attr("x1") = nodes[s1].x;
+     //   var s1 = svg.select(".functor");//.attr("source");
+       // if (s1.length > 1)
+         // s1.attr("x1") = nodes[s1].x;
 /*
         var functors = svg.selectAll(".functor")
     .attr("x1", nodes[1].x)
